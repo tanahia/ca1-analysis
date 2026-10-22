@@ -1,0 +1,34 @@
+@startuml
+left to right direction
+actor StaffMember
+actor Group
+actor FacilityCoordinator
+
+rectangle "Kerry Community Sports Partnership " {
+  usecase "Record an unavailable space" as U1
+  usecase "Record unavailable equipment" as U2
+  usecase "View combined availability" as U3
+  usecase "Submit booking request" as U4
+  usecase "Process booking request" as U5
+  usecase "Manage provisional and recurring booking" as U6
+  usecase " Record changes relatedto booking" as U7
+  usecase " Inform contacts of changes done to booking" as U8
+  usecase "Offer alternative for restricted outdoor space" as U9
+  usecase "Give relief staff instructions, access codes and keys " as U10
+  usecase "Record group history" as U11
+  usecase "Build report using records available" as U12
+}
+
+StaffMember --> U1
+StaffMember --> U2
+StaffMember --> U3
+StaffMember --> U5
+StaffMember --> U6
+StaffMember --> U7
+StaffMember --> U8
+StaffMember --> U9
+StaffMember --> U10
+StaffMember --> U11
+Group --> U4
+FacilityCoordinator --> U12
+@enduml
