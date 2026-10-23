@@ -1,7 +1,7 @@
 
-#Kerry Community Sports Facility Service
+# Kerry Community Sports Facility Service
 
-##Project Overview
+## Project Overview
 
 This project analyses the requirements for a community sports facility service coordinated by Kerry Community Sports Partnership. The service manages bookings for sports pitches, halls, training rooms and shared equipment across multiple sites.
 
