@@ -39,7 +39,7 @@ ca1-analysis
 
 - **diagrams/** – Contains the PlantUML diagrams, including the user model and domain model.
 - **features/** – Contains Gherkin feature files.
-- **References/** – Contains AI reflection document.
+- **References/** – Contains AI reflection document, AI Declaration of Originality document and github URL.
 - **report/** – Contains the project report.
 - **requirements/** – Contains the project functional and non-functional requirements document.
 - **README.md** – Provides an overview of the repository and explains its structure.
