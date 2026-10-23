@@ -1,0 +1,86 @@
+@startuml
+class Facility {
+  facilityId
+  name
+  spaces
+  equipments
+}
+class StaffMember {
+  staffId
+  name
+  role
+}
+class Space{
+  spaceId
+  spaceType
+  capacity
+  lightningSuitability
+  spaceConfiguration
+
+}
+class Restriction {
+  restrictionId
+  startDateTime
+  endDateTime
+  end
+  reason
+  space
+}
+class Group {
+  groupId
+  name
+  groupHistory
+}
+class Equipment{
+  equipmentId
+  equipmentType
+  location
+  repairStatus
+  reservations
+}
+class BookingContact{
+  bookingContactId
+  name
+  role
+  contactDetails
+}
+class ReliefStaff{
+  reliefStaffId
+  name
+  instructions
+  accessCodesKeys
+}
+
+class Booking {
+  bookingId
+  startDateTime
+  endDateTime
+  participantNumbers
+  equipment
+  setupTime
+  resetTime
+  status
+}
+class Decision {
+  decisionId
+  date
+  reason
+  booking
+  staffMember
+  message
+}
+
+Facility "1" -- "1..*" Space : contains
+Facility "1" -- "0..*" Equipment : has
+Facility "1" -- "0..*" ReliefStaff : assigns
+
+Space "1" -- "0..*" Restriction : has
+
+Group "1" -- "0..*" Booking : makes
+BookingContact "1" -- "0..*" Booking : is contact for
+Space "1" -- "0..*" Booking : is reserved through
+Booking "0..*" -- "0..*" Equipment : reserves
+
+Booking "1" -- "0..1" Decision : has
+StaffMember "1" -- "0..*" Decision : makes
+@enduml
